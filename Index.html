@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Minha Pessoa Favorita 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="fx"></canvas>
+
+  <header>
+    <h1>💌 Carta para <span id="alvoLabel">minha pessoa favorita</span> <span class="badge">Para uma pessoa especial</span></h1>
+    <div class="controls">
+      <button id="preview" class="btn">Pré-visualizar ✨</button>
+      <button id="share" class="btn">Compartilhar 🔗</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="pane editor">
+      <form class="form" id="form">
+        <div class="row">
+          <div style="flex:2; min-width: 220px;">
+            <label for="nome">Nome da pessoa</label>
+            <input id="nome" type="text" placeholder="Ex.: Sasa" maxlength="40" />
+          </div>
+          <div style="flex:3; min-width: 220px;">
+            <label for="titulo">Título da carta</label>
+            <input id="titulo" type="text" placeholder="Ex.: Para alegrar seu dia..." maxlength="60" />
+          </div>
+        </div>
+        <div>
+          <label for="mensagem">Seu textinho especial</label>
+          <textarea id="mensagem" placeholder="Escreva aqui o que seu coração quiser dizer..." maxlength="1800"></textarea>
+          <div class="counter"><span id="count">0</span>/1800 caracteres</div>
+        </div>
+        <div class="row">
+          <button type="button" class="btn-prim" id="aplicar">Aplicar na carta</button>
+          <button type="button" class="btn-ghost" id="limpar">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="pane letter-viewport">
+      <article class="letter" id="letter">
+        <div class="shine" aria-hidden></div>
+        <div class="seal">💖</div>
+
+        <h2 id="to">Para: Minha Pessoa Favorita</h2>
+        <h3 id="title">Você é meu lugar preferido</h3>
+        <div class="message" id="previewMsg">Escreva sua mensagem e clique em "Aplicar na carta" ou "Pré-visualizar" para ver aqui ✨
+        </div>
+        <div class="signature" id="sig">Com carinho, <span id="autor">Sensei</span></div>
+        <div class="heartline" aria-hidden></div>
+      </article>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
